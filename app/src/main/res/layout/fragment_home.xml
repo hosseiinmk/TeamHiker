@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    android:layoutDirection="rtl"
+    android:padding="5dp">
+
+    <!-- Slide Show -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/homeFragment_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layoutDirection="ltr"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- SearchBox -->
+    <RelativeLayout
+        android:id="@+id/homeFragment_searchBoxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/home_fragment_search_box_background"
+        android:focusableInTouchMode="true"
+        android:layoutDirection="rtl"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/homeFragment_viewPager">
+
+        <EditText
+            android:id="@+id/homeFragmentSearchBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/homeSearchBoxImage"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="5dp"
+            android:focusable="false"
+            android:hint="کجا میخوای بری؟"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
+
+        <ImageView
+            android:id="@+id/homeSearchBoxImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/map_image" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/homeFragment_groupAndDestinationLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/homeFragment_shareExperiencesBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeFragment_searchBoxLayout"
+        app:layout_constraintVertical_weight="1.5">
+
+        <!-- Destination -->
+        <RelativeLayout
+            android:id="@+id/homeFragment_chooseDestinationBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@drawable/home_fragment_destination_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="مقصدتو انتخاب کن"
+                android:textColor="@color/colorBackground"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/destination_image" />
+
+        </RelativeLayout>
+
+        <!-- Groups -->
+        <RelativeLayout
+            android:id="@+id/homeFragment_groupsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_fragment_groups_background"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="گروه ها"
+                android:textColor="@color/colorBackground"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/groups_image" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Experiences -->
+    <LinearLayout
+        android:id="@+id/homeFragment_shareExperiencesBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/home_fragment_tours_background"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeFragment_groupAndDestinationLayout"
+        app:layout_constraintVertical_weight="1">
+
+        <TextView
+            android:id="@+id/homeFragment_shareExperiencesTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="10dp"
+            android:text="تجربیات کاربران"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/share_experience_image" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

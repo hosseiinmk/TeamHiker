@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    android:layoutDirection="rtl"
+    tools:context=".activities.EditPersonalInformationActivity">
+
+    <RelativeLayout
+        android:id="@+id/editPersonalInformation_toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/editPersonalInformation_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:contentDescription="@string/image"
+            android:src="@drawable/ic_back" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/editPersonalInformation_toolbarLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        
+        <!-- Photo -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/editPersonalInformation_circleImage"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/circle_image_background"
+            android:padding="20dp"
+            android:src="@drawable/ic_camera" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/page_background"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <!-- Main Form Container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Username TextView Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_usernameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:textDirection="rtl">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            android:id="@+id/editPersonalInformation_username"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_username_editBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_edit" />
+
+                    </LinearLayout>
+
+                    <!-- Username EditText Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_editUsernameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/editPersonalInformation_editUsername"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:autofillHints="@string/username"
+                            android:background="@drawable/simple_background"
+                            android:drawableStart="@drawable/ic_person"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/username"
+                            android:inputType="textNoSuggestions"
+                            android:padding="10dp"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editUsername_doneBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_done" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editUsername_cancelBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_close" />
+
+                    </LinearLayout>
+
+                    <!-- Name TextView Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_nameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:textDirection="rtl">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_person_pin" />
+
+                        <TextView
+                            android:id="@+id/editPersonalInformation_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_name_editBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_edit" />
+
+                    </LinearLayout>
+
+                    <!-- Name EditText Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_editNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <!-- Name EditText -->
+                        <EditText
+                            android:id="@+id/editPersonalInformation_editName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:autofillHints="@string/last_name"
+                            android:background="@drawable/simple_background"
+                            android:drawableStart="@drawable/ic_person_pin"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/last_name"
+                            android:inputType="textNoSuggestions"
+                            android:padding="10dp"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editName_doneBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_done" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editName_cancelBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_close" />
+
+                    </LinearLayout>
+
+                    <!-- Email TextView Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_emailLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:textDirection="rtl">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_at_sign" />
+
+                        <TextView
+                            android:id="@+id/editPersonalInformation_email"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_email_editBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_edit" />
+
+                    </LinearLayout>
+
+                    <!-- Email EditText Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_editEmailLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <!-- Email EditText -->
+                        <EditText
+                            android:id="@+id/editPersonalInformation_editEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/simple_background"
+                            android:drawableStart="@drawable/ic_at_sign"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/email"
+                            android:autofillHints="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:padding="10dp"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editEmail_doneBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_done" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editEmail_cancelBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_close" />
+
+                    </LinearLayout>
+
+                    <!-- Birthday TextView Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_birthdayLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:textDirection="rtl">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_cake" />
+
+                        <TextView
+                            android:id="@+id/editPersonalInformation_birthday"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_birthday_editBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_edit" />
+
+                    </LinearLayout>
+
+                    <!-- City TextView Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_cityLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:textDirection="rtl">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_city" />
+
+                        <TextView
+                            android:id="@+id/editPersonalInformation_city"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_city_editBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_edit" />
+
+                    </LinearLayout>
+
+                    <!-- City EditText Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_editCityLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/editPersonalInformation_editCity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/simple_background"
+                            android:drawableStart="@drawable/ic_city"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/living_city"
+                            android:autofillHints="@string/living_city"
+                            android:inputType="textNoSuggestions"
+                            android:padding="10dp"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editCity_doneBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_done" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editCity_cancelBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_close" />
+
+                    </LinearLayout>
+
+                    <!-- PhoneNumber TextView Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_phoneNumberLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:textDirection="rtl">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_phone" />
+
+                        <TextView
+                            android:id="@+id/editPersonalInformation_phoneNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_phoneNumber_editBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_edit" />
+
+                    </LinearLayout>
+
+                    <!-- PhoneNumber EditText Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_editPhoneNumberLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/editPersonalInformation_editPhoneNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/simple_background"
+                            android:drawableStart="@drawable/ic_phone"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/phone_number"
+                            android:autofillHints="@string/phone_number"
+                            android:inputType="phone"
+                            android:padding="10dp"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editPhoneNumber_doneBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_done" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editPhoneNumber_cancelBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_close" />
+
+                    </LinearLayout>
+
+                    <!-- AboutMe TextView Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_aboutMeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:textDirection="rtl">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_info" />
+
+                        <TextView
+                            android:id="@+id/editPersonalInformation_aboutMe"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/simple_background"
+                            android:padding="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_aboutMe_editBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_edit" />
+
+                    </LinearLayout>
+
+                    <!-- AboutMe EditText Container -->
+                    <LinearLayout
+                        android:id="@+id/editPersonalInformation_editAboutMeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/editPersonalInformation_editAboutMe"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/simple_background"
+                            android:drawableStart="@drawable/ic_info"
+                            android:drawablePadding="10dp"
+                            android:ems="10"
+                            android:hint="@string/about_me"
+                            android:inputType="textLongMessage"
+                            android:autofillHints="@string/about_me"
+                            android:lineSpacingExtra="10dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editAboutMe_doneBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_done" />
+
+                        <ImageView
+                            android:id="@+id/editPersonalInformation_editAboutMe_cancelBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/image"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_close" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <!-- Buttons Container -->
+            <LinearLayout
+                android:id="@+id/editPersonalInformation_btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layoutDirection="rtl"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <!--Submit Button-->
+                <Button
+                    android:id="@+id/editPersonalInformation_submitBtn"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/simple_background"
+                    android:text="@string/register"
+                    android:textColor="@color/colorBackground"
+                    android:textSize="25sp" />
+
+                <!--Cancel Button-->
+                <Button
+                    android:id="@+id/editPersonalInformation_cancelBtn"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/simple_background"
+                    android:text="@string/cancel"
+                    android:textColor="@color/colorBackground"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/editPersonalInformation_progressBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:background="@color/colorDarkGrayTransparent"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorBackground" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:layoutDirection="rtl"
+    tools:context=".activities.VerificationCodeActivity">
+
+    <RelativeLayout
+        android:id="@+id/verificationCode_progressBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorDarkGrayTransparent"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorBackground" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/verificationCode_backBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/verificationCode_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="کد تایید را وارد نمایید"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/verificationCode_editTextsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/verificationCode_editTextsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/verificationCode_numOne"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:hint="*" />
+
+        <EditText
+            android:id="@+id/verificationCode_numTwo"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/verificationCode_numOne"
+            android:hint="*" />
+
+        <EditText
+            android:id="@+id/verificationCode_numThree"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/verificationCode_numTwo"
+            android:hint="*" />
+
+        <EditText
+            android:id="@+id/verificationCode_numFour"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/verificationCode_numThree"
+            android:hint="*" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/verificationCode_submitBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="تایید"
+        android:textColor="@color/colorBackground"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verificationCode_editTextsLayout" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verificationCode_submitBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

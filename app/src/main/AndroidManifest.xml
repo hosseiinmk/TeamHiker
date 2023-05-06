@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity android:name=".activities.PublicProfileActivity"/>
+        <activity android:name=".activities.AddFriendActivity" />
+        <activity android:name=".activities.AddToolsActivity" />
+        <activity android:name=".activities.AddExperienceActivity" />
+        <activity android:name=".activities.EditPersonalInformationActivity" />
+        <activity android:name=".activities.AdminPanelActivity" />
+        <activity android:name=".activities.PlaceDetailsAttractionPlaceDetailsActivity" />
+        <activity android:name=".activities.PlaceDetailsActivity" />
+        <activity android:name=".activities.AddBlogActivity" />
+        <activity android:name=".activities.ExperienceCommentsActivity" />
+        <activity android:name=".activities.AddExperienceLocationActivity" />
+        <activity android:name=".activities.ShareExperienceActivity" />
+        <activity android:name=".activities.GroupDetailAssignTaskActivity" />
+        <activity android:name=".activities.GroupDetailActivity" />
+        <activity android:name=".activities.GroupChatActivity" />
+        <activity android:name=".activities.CreateGroupAttractionsActivity" />
+        <activity android:name=".activities.CreateGroupNecessaryToolsActivity" />
+        <activity android:name=".activities.CreateGroupMemberNecessaryToolsActivity" />
+        <activity android:name=".activities.CreateGroupChooseLeaderActivity" />
+        <activity android:name=".activities.CreateGroupInformationActivity" />
+        <activity android:name=".activities.CreateGroupDescriptionActivity" />
+        <activity android:name=".activities.CreateGroupAddMemberActivity" />
+        <activity android:name=".activities.CreateGroupChooseDestinationActivity" />
+        <activity android:name=".activities.SurveyCatchupActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity
+            android:name=".activities.VerificationCodeActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".activities.PhoneNumberActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".activities.RegisterLoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.MainActivity" />
+    </application>
+
+</manifest>

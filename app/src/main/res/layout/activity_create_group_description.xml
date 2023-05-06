@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    android:layoutDirection="rtl"
+    tools:context=".activities.CreateGroupDescriptionActivity">
+
+    <RelativeLayout
+        android:id="@+id/createGroupDescription_toolBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorBackground">
+
+        <ImageView
+            android:id="@+id/createGroupDescription_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/createGroupDescription_nextStepBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="مرحله بعدی"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            app:drawableEndCompat="@drawable/ic_check" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/createGroupDescription_toolBarLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="-3dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/page_background"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/createGroupDescription_mainTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:text="برنامه و توضیحات سفر"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/createGroupDescription_secondTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="لطفا برنامه سفر را در بخش های زیر وارد نمایید"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_mainTitle" />
+
+            <TextView
+                android:id="@+id/createGroupDescription_startTravelDateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:text="تاریخ شروع سفر"
+                android:textColor="@color/colorBlack"
+                app:drawableEndCompat="@drawable/ic_circle_check"
+                app:drawableTint="@color/colorGreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_secondTitle" />
+
+            <DatePicker
+                android:id="@+id/createGroupDescription_startTravelDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:layoutDirection="rtl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_startTravelDateTitle" />
+
+            <TextView
+                android:id="@+id/createGroupDescription_endTravelDateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:text="تاریخ اتمام سفر"
+                android:textColor="@color/colorBlack"
+                app:drawableEndCompat="@drawable/ic_circle_check"
+                app:drawableTint="@color/colorGreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_startTravelDate" />
+
+            <DatePicker
+                android:id="@+id/createGroupDescription_endTravelDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:layoutDirection="rtl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_endTravelDateTitle" />
+
+            <TextView
+                android:id="@+id/createGroupDescription_travelMoveDetailsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:drawablePadding="10dp"
+                android:text="مکان و ساعت حرکت و بازگشت"
+                android:textColor="@color/colorBlack"
+                app:drawableEndCompat="@drawable/ic_circle_check"
+                app:drawableTint="@color/colorGreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_endTravelDate" />
+
+            <RelativeLayout
+                android:id="@+id/createGroupDescription_travelMoveDetailsTopLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_travelMoveDetailsTitle">
+
+                <TextView
+                    android:id="@+id/createGroupDescription_startTravelTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="مبدا" />
+
+                <EditText
+                    android:id="@+id/createGroupDescription_startTravel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/createGroupDescription_travelMoveTimeTitle"
+                    android:layout_toEndOf="@+id/createGroupDescription_startTravelTitle"
+                    android:background="@drawable/simple_background"
+                    android:gravity="center"
+                    android:hint="مبدا"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/createGroupDescription_travelMoveTimeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/createGroupDescription_travelMoveTimeBtn"
+                    android:gravity="center"
+
+                    android:text="ساعت حرکت" />
+
+                <TextView
+                    android:id="@+id/createGroupDescription_travelMoveTimeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/simple_background"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:padding="10dp"
+                    android:text="ساعت حرکت" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/createGroupDescription_travelMoveDetailsBottomLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_travelMoveDetailsTopLayout">
+
+                <TextView
+                    android:id="@+id/createGroupDescription_endTravelTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="پایان" />
+
+                <EditText
+                    android:id="@+id/createGroupDescription_endTravel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/createGroupDescription_arriveTimeTitle"
+                    android:layout_toEndOf="@+id/createGroupDescription_endTravelTitle"
+                    android:background="@drawable/simple_background"
+                    android:gravity="center"
+                    android:hint="پایان"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/createGroupDescription_arriveTimeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/createGroupDescription_arriveTimeBtn"
+                    android:gravity="center"
+                    android:text="ساعت رسیدن" />
+
+                <TextView
+                    android:id="@+id/createGroupDescription_arriveTimeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/simple_background"
+                    android:gravity="center"
+                    android:layoutDirection="ltr"
+                    android:padding="10dp"
+                    android:text="ساعت رسیدن" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/createGroupDescription_travelDestinationsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:text="مقصد های سفر"
+                android:textColor="@color/colorBlack"
+                app:drawableEndCompat="@drawable/ic_circle_check"
+                app:drawableTint="@color/colorGreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_travelMoveDetailsBottomLayout" />
+
+            <EditText
+                android:id="@+id/createGroupDescription_targetDestination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/simple_background"
+                android:padding="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/createGroupDescription_addTargetDestinationBtn"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_travelDestinationsTitle" />
+
+            <TextView
+                android:id="@+id/createGroupDescription_addTargetDestinationBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@drawable/simple_background"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="افزودن"
+                app:layout_constraintBottom_toBottomOf="@+id/createGroupDescription_targetDestination"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/createGroupDescription_targetDestination"
+                app:layout_constraintTop_toTopOf="@+id/createGroupDescription_targetDestination" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/createGroupDescription_targetDestinationsRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_targetDestination" />
+
+            <TextView
+                android:id="@+id/createGroupDescription_needOnWayToolsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="20dp"
+                android:text="وسایل مورد نیاز راه"
+                android:textColor="@color/colorBlack"
+                app:drawableEndCompat="@drawable/ic_circle_check"
+                app:drawableTint="@color/colorGreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_targetDestinationsRecyclerView" />
+
+            <EditText
+                android:id="@+id/createGroupDescription_needOnWayTools"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/simple_background"
+                android:ems="10"
+                android:gravity="top"
+                android:lines="5"
+                android:maxLines="5"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_needOnWayToolsTitle" />
+
+            <TextView
+                android:id="@+id/createGroupDescription_mealsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:text="وعده های غذایی(توسط گروه)"
+                android:textColor="@color/colorBlack"
+                app:drawableEndCompat="@drawable/ic_circle_check"
+                app:drawableTint="@color/colorGreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_needOnWayTools" />
+
+            <EditText
+                android:id="@+id/createGroupDescription_meals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/simple_background"
+                android:ems="10"
+                android:gravity="top"
+                android:lines="5"
+                android:maxLines="5"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_mealsTitle" />
+
+            <TextView
+                android:id="@+id/createGroupDescription_moreNotesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:text="توضیحات بیشتر"
+                android:textColor="@color/colorBlack"
+                app:drawableEndCompat="@drawable/ic_circle_check"
+                app:drawableTint="@color/colorGreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_meals" />
+
+            <EditText
+                android:id="@+id/createGroupDescription_moreNotes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/simple_background"
+                android:ems="10"
+                android:gravity="top"
+                android:lines="5"
+                android:maxLines="5"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createGroupDescription_moreNotesTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

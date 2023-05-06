@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="editTextStyle">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:digits">0123456789</item>
+    </style>
+
+    <style name="main_activity_drawer_text_style">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DatePickerStyle" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:datePickerStyle">@style/DatePicker</item>
+    </style>
+
+    <style name="DatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+    <style name="RatingBarColor" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorDarkGray</item>
+        <item name="colorControlActivated">@color/colorGold</item>
+    </style>
+
+    <style name="RatingBarSizeSmall" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/colorDarkGray</item>
+        <item name="colorControlActivated">@color/colorGold</item>
+    </style>
+
+</resources>

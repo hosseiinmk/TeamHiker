@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    tools:context=".activities.RegisterActivity">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/page_background"
+            android:layoutDirection="rtl"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/register_backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="20dp"
+                android:src="@drawable/ic_back" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/register_circleImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/circle_image_background"
+                android:padding="20dp"
+                android:src="@drawable/ic_camera" />
+
+            <EditText
+                android:id="@+id/register_editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_circleImage"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_person_pin"
+                android:drawablePadding="10dp"
+                android:hint="نام کاربری"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:id="@+id/register_editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_editTextUsername"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:hint="نام و نام خانوادگی"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:id="@+id/register_editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_editTextName"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_at_sign"
+                android:drawablePadding="10dp"
+                android:hint="ایمیل"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/colorBlack" />
+
+            <DatePicker
+                android:id="@+id/register_datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_editTextEmail"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:layoutDirection="rtl" />
+
+            <AutoCompleteTextView
+                android:id="@+id/register_editTextCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_datePicker"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_background"
+                android:completionThreshold="1"
+                android:drawableStart="@drawable/ic_city"
+                android:drawablePadding="10dp"
+                android:hint="محل سکونت"
+                android:maxLines="1"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:id="@+id/register_radioGroupsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_editTextCity"
+                android:layout_marginBottom="100dp"
+                android:layoutDirection="ltr"
+                android:orientation="vertical">
+
+                <!-- gender -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical">
+
+                    <RadioGroup
+                        android:id="@+id/register_genderRadioGroup"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/register_maleRadioGroup"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="مرد" />
+
+                        <RadioButton
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="زن" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="جنسیت" />
+
+                </LinearLayout>
+
+                <!-- Experience -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <RadioGroup
+                        android:id="@+id/register_experienceRadioGroup"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="ندارم" />
+
+                        <RadioButton
+                            android:id="@+id/registerFormExperienceYes"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="دارم" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="سابقه طبیعت گردی دارید؟" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/register_submitBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/edit_text_background"
+                android:text="ثبت اطلاعات"
+                android:textColor="@color/colorBackground"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/register_progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorDarkGrayTransparent"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorBackground" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/page_background"
+    android:layoutDirection="rtl"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/experienceItem_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/experienceItem_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/experienceItem_location">
+
+        <ImageView
+            android:id="@+id/experienceItem_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image"
+            android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/experienceItem_titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/experienceItem_cardView">
+
+        <ImageView
+            android:id="@+id/experienceItem_shareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_share_black"
+            android:contentDescription="@string/image"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/experienceItem_commentBtn"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="15dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image"
+                android:src="@drawable/ic_comment_black" />
+
+            <TextView
+                android:id="@+id/experienceItem_likesNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/experienceItem_btnLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/image"
+                android:src="@drawable/ic_favorite_black" />
+
+            <TextView
+                android:id="@+id/experienceItem_viewNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/experienceItem_viewsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@string/image"
+                android:src="@drawable/ic_view" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/experienceItem_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintTop_toBottomOf="@+id/experienceItem_titleLayout" />
+
+    <TextView
+        android:id="@+id/experienceItem_goodNotesTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/positive_notes"
+        android:textColor="@color/colorGreen"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/experienceItem_description" />
+
+    <TextView
+        android:id="@+id/experienceItem_goodNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintTop_toBottomOf="@+id/experienceItem_goodNotesTitle" />
+
+    <TextView
+        android:id="@+id/experienceItem_badNotesTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/negative_notes"
+        android:textColor="@color/colorRed"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/experienceItem_goodNotes" />
+
+    <TextView
+        android:id="@+id/experienceItem_badNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintTop_toBottomOf="@+id/experienceItem_badNotesTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

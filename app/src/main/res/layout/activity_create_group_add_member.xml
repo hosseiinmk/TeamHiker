@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    android:layoutDirection="rtl"
+    tools:context=".activities.CreateGroupAddMemberActivity">
+
+    <RelativeLayout
+        android:id="@+id/createGroupAddMember_toolBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorBackground">
+
+        <ImageView
+            android:id="@+id/createGroupAddMember_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/createGroupAddMember_nextStepBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="مرحله بعدی"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            app:drawableEndCompat="@drawable/ic_check" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/createGroupAddMember_toolBarLayout"
+        android:background="@drawable/page_background"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/createGroupAddMember_memberNumberTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:text="حداقل و حداکثر افراد گروه را مشخص کنید"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            app:drawableEndCompat="@drawable/ic_add_group_member"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/createGroupAddMember_minimumMemberNumber"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/simple_background"
+            android:digits="0987654321"
+            android:gravity="center"
+            android:hint="حداقل"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createGroupAddMember_memberNumberTitle" />
+
+        <EditText
+            android:id="@+id/createGroupAddMember_maximumMemberNumber"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/simple_background"
+            android:digits="0987654321"
+            android:gravity="center"
+            android:hint="حداکثر"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createGroupAddMember_memberNumberTitle" />
+
+        <TextView
+            android:id="@+id/createGroupAddMember_groupMembersTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+            android:text="اعضای گروه"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            app:drawableEndCompat="@drawable/ic_add_group_member"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createGroupAddMember_minimumMemberNumber" />
+
+        <EditText
+            android:id="@+id/createGroupAddMember_searchBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/simple_background"
+            android:drawableStart="@drawable/ic_search_gray"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/createGroupAddMember_groupMembersTitle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/createGroupAddMember_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createGroupAddMember_searchBox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

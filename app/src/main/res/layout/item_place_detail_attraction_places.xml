@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/simple_background"
+    android:layoutDirection="rtl">
+
+    <TextView
+        android:id="@+id/placeDetailsAttractionPlacesItem_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        app:drawableStartCompat="@drawable/ic_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/placeDetailsAttractionPlacesItem_imageLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeDetailsAttractionPlacesItem_location">
+
+        <ImageView
+            android:id="@+id/placeDetailsAttractionPlacesItem_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image"
+            android:maxHeight="150dp"
+            android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/placeDetailsAttractionPlacesItem_descriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/description"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeDetailsAttractionPlacesItem_imageLayout" />
+
+    <ImageView
+        android:id="@+id/placeDetailsAttractionPlacesItem_viewsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/ic_view"
+        app:layout_constraintBottom_toBottomOf="@+id/placeDetailsAttractionPlacesItem_descriptionTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/placeDetailsAttractionPlacesItem_descriptionTitle" />
+
+    <TextView
+        android:id="@+id/placeDetailsAttractionPlacesItem_likesNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/placeDetailsAttractionPlacesItem_viewsIcon"
+        app:layout_constraintEnd_toStartOf="@+id/placeDetailsAttractionPlacesItem_viewsIcon"
+        app:layout_constraintTop_toBottomOf="@+id/placeDetailsAttractionPlacesItem_imageLayout"
+        app:layout_constraintTop_toTopOf="@+id/placeDetailsAttractionPlacesItem_viewsIcon" />
+
+    <TextView
+        android:id="@+id/placeDetailsAttractionPlacesItem_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:maxLines="3"
+        android:lineSpacingExtra="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeDetailsAttractionPlacesItem_descriptionTitle" />
+
+    <TextView
+        android:id="@+id/placeDetailsAttractionPlacesItem_btnMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/more"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeDetailsAttractionPlacesItem_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:layoutDirection="rtl"
+    tools:context=".activities.PhoneNumberActivity">
+
+    <ImageView
+        android:id="@+id/phoneNumber_backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phoneNumber_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="شماره همراه خود را وارد کنید"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumber_editTextsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/phoneNumber_editTextsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/phoneNumber_numOne"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:hint="0" />
+
+        <EditText
+            android:id="@+id/phoneNumber_numTwo"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/phoneNumber_numOne"
+            android:hint="9" />
+
+        <EditText
+            android:id="@+id/phoneNumber_numThree"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/phoneNumber_numTwo"
+            android:hint="*" />
+
+        <EditText
+            android:id="@+id/phoneNumber_numFour"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/phoneNumber_numThree"
+            android:hint="*" />
+
+        <EditText
+            android:id="@+id/phoneNumber_numFive"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/phoneNumber_numFour"
+            android:hint="*" />
+
+        <EditText
+            android:id="@+id/phoneNumber_numSix"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/phoneNumber_numFive"
+            android:hint="*" />
+
+        <EditText
+            android:id="@+id/phoneNumber_numSeven"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/phoneNumber_numSix"
+            android:hint="*" />
+
+        <EditText
+            android:id="@+id/phoneNumber_numEight"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/phoneNumber_numSeven"
+            android:hint="*" />
+
+        <EditText
+            android:id="@+id/phoneNumber_numNine"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/phoneNumber_numEight"
+            android:hint="*" />
+
+        <EditText
+            android:id="@+id/phoneNumber_numTen"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/phoneNumber_numNine"
+            android:hint="2" />
+
+        <EditText
+            android:id="@+id/phoneNumber_numEleven"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/phoneNumber_numTen"
+            android:hint="3" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/phoneNumber_submitBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="ارسال کد"
+        android:textColor="@color/colorBackground"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber_editTextsLayout" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber_submitBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

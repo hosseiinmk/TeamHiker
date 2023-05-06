@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <TextView
+        android:id="@+id/placeDetailsAttractionPlaces_btnJungles"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/simple_background"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="جنگل ها"
+        android:textColor="@color/colorBackground"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/placeDetailsAttractionPlaces_btnLakeAndWaterfall"
+        app:layout_constraintEnd_toStartOf="@+id/placeDetailsAttractionPlaces_btnLakeAndWaterfall"
+        app:layout_constraintTop_toTopOf="@+id/placeDetailsAttractionPlaces_btnLakeAndWaterfall" />
+
+    <TextView
+        android:id="@+id/placeDetailsAttractionPlaces_btnLakeAndWaterfall"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/simple_background"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="دریاچه و آبشار ها"
+        android:textColor="@color/colorBackground"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/placeDetailsAttractionPlaces_btnHistoricalPlaces"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/simple_background"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="مکان های تاریخی"
+        android:textColor="@color/colorBackground"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/placeDetailsAttractionPlaces_btnLakeAndWaterfall"
+        app:layout_constraintStart_toEndOf="@+id/placeDetailsAttractionPlaces_btnLakeAndWaterfall"
+        app:layout_constraintTop_toTopOf="@+id/placeDetailsAttractionPlaces_btnLakeAndWaterfall" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/placeDetailsAttractionPlaces_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeDetailsAttractionPlaces_btnLakeAndWaterfall" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

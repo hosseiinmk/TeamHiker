@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainActivityDrawer_profile"
+        android:icon="@drawable/ic_person"
+        android:title="پروفایل" />
+
+    <item
+        android:id="@+id/mainActivityDrawer_friends"
+        android:icon="@drawable/ic_friends"
+        android:title="دوستان" />
+
+    <item
+
+        android:icon="@drawable/ic_travel"
+        android:title="سفر ها" />
+
+    <item
+        android:id="@+id/mainActivityDrawer_tools"
+        android:icon="@drawable/ic_tools"
+        android:title="تجهیزات" />
+
+    <item
+        android:icon="@drawable/ic_favorite"
+        android:title="نشان شده ها" />
+
+    <item
+        android:icon="@drawable/ic_store"
+        android:title="آگهی های من" />
+
+
+    <item
+        android:title="" />
+
+    <item
+        android:id="@+id/mainActivityDrawer_exit"
+        android:icon="@drawable/ic_exit"
+        android:title="خروج از حساب کاربری" />
+</menu>

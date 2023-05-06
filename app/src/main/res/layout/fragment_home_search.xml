@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/page_background"
+        android:layoutDirection="rtl">
+
+        <!-- SearchBox -->
+        <RelativeLayout
+            android:id="@+id/searchFragment_searchBoxLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_fragment_search_box_background"
+            android:focusableInTouchMode="true"
+            android:layoutDirection="rtl"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/searchFragment_SearchBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@+id/searchFragment_Image"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="5dp"
+                android:focusable="false"
+                android:hint="کجا میخوای بری؟"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite" />
+
+            <ImageView
+                android:id="@+id/searchFragment_Image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/map_image" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/searchFragment_searchBoxLayout">
+
+            <LinearLayout
+                android:id="@+id/searchFragment_button1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:background="@drawable/simple_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="مکان های دیدنی"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/title_font"
+                    android:textColor="@color/colorBackground"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/searchFragment_button2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:background="@drawable/simple_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="جاذبه های طبیعی"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/title_font"
+                    android:textColor="@color/colorBackground"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/searchFragment_button3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/simple_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="رویدادها و جشنواره ها"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/title_font"
+                    android:textColor="@color/colorBackground"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

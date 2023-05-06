@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Team Hike</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">توضیحات</string>
+    <string name="more">بیشتر</string>
+    <string name="image">تصویر</string>
+    <string name="personal_information">اطلاعات شخصی</string>
+    <string name="username">نام کاربری</string>
+    <string name="about_me">درباره من</string>
+    <string name="edit">ویرایش</string>
+    <string name="rank">لقب</string>
+    <string name="score">امتیاز</string>
+    <string name="experience_and_gallery">تجربیات + گالری</string>
+    <string name="tools">تجهیزات</string>
+    <string name="friends">دوستان</string>
+    <string name="places">مکان ها</string>
+    <string name="enter_to_admin_panel">ورود به پنل ادمین</string>
+    <string name="groups">گروه ها</string>
+    <string name="check">بررسی</string>
+    <string name="destination">مقصد</string>
+    <string name="members_number">تعداد اعضا</string>
+    <string name="finish_time">زمان برگشت</string>
+    <string name="start_time">زمان حرکت</string>
+    <string name="colon">:</string>
+    <string name="accept">تایید</string>
+    <string name="reject">رد کردن</string>
+    <string name="group">گروه</string>
+    <string name="after_create_group_message">گروه شما جهت بررسی به تیم نظرات تیم هایکر ارجاع داده شد و نهایتا طی 24 ساعت کاری برای کاربران قابل مشاهده خواهد بود</string>
+    <string name="after_create_group_congratulation_message">تبریک! گروه شما ساخته شد</string>
+    <string name="edit_group">ویرایش گروه</string>
+    <string name="group_situation">وضعیت گروه: درحال بررسی</string>
+    <string name="call_to_support">تماس با پشتیبانی</string>
+    <string name="return_to_home">بازگشت به صفحه اصلی</string>
+    <string name="register_price">هزینه ثبت نام</string>
+    <string name="toman">هزارتومان</string>
+    <string name="no_network_connection_title">متاسفانه به اینترنت متصل نیستید</string>
+    <string name="last_name">نام خانوادگی</string>
+    <string name="email">ایمیل</string>
+    <string name="living_city">شهر محل سکونت</string>
+    <string name="phone_number">شماره موبایل</string>
+    <string name="register">ثبت</string>
+    <string name="cancel">لغو</string>
+    <string name="write_description">توضیحات خود را اینجا بنویسید</string>
+    <string name="write_positive_notes">نکات مثبت سفرتون رو بنویسید</string>
+    <string name="write_negative_notes">نکات منفی سفرتون رو بنویسید</string>
+    <string name="choose_image_location">مکان مربوط به تصویر را انتخاب کن</string>
+    <string name="tools_groups">دسته بندی تجهیزات</string>
+    <string name="related_tools">تجهیزات مربوط</string>
+    <string name="number">تعداد</string>
+    <string name="save">ذخیره</string>
+    <string name="positive_notes">نکات مثبت</string>
+    <string name="negative_notes">نکات منفی</string>
+    <string name="add_blog">افزودن بلاگ</string>
+</resources>

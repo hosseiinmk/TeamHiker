@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    android:layoutDirection="rtl"
+    tools:context=".activities.AddExperienceActivity">
+
+    <RelativeLayout
+        android:id="@+id/addExperience_toolbarLayout"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/addExperience_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/image"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:src="@drawable/ic_back" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/page_background"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addExperience_toolbarLayout">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addExperience_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="true">
+
+            <ImageView
+                android:id="@+id/addExperience_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="@drawable/simple_background"
+                android:contentDescription="@string/image"
+                android:padding="80dp"
+                android:src="@drawable/ic_upload" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addExperience_addLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/choose_image_location"
+                    app:drawableStartCompat="@drawable/ic_add_location_dark_gray" />
+
+                <EditText
+                    android:id="@+id/addExperience_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/write_description"
+                    android:background="@drawable/simple_background"
+                    android:gravity="top"
+                    android:hint="@string/write_description"
+                    android:inputType="textMultiLine"
+                    android:maxLines="5"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/addExperience_goodNotesDropDownTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/write_positive_notes"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="20sp"
+                    app:drawableEndCompat="@drawable/ic_drop_down_green" />
+
+                <EditText
+                    android:id="@+id/addExperience_goodNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/write_positive_notes"
+                    android:background="@drawable/simple_background"
+                    android:gravity="top"
+                    android:hint="@string/write_positive_notes"
+                    android:inputType="textMultiLine"
+                    android:layoutDirection="rtl"
+                    android:lineSpacingExtra="5dp"
+                    android:lines="5"
+                    android:padding="10dp"
+                    android:textColorHint="@color/colorGreen"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/addExperience_badNotesDropDownTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/write_negative_notes"
+                    android:textColor="@color/colorRed"
+                    android:textSize="20sp"
+                    app:drawableEndCompat="@drawable/ic_drop_down_red" />
+
+                <EditText
+                    android:id="@+id/addExperience_badNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/write_negative_notes"
+                    android:background="@drawable/simple_background"
+                    android:gravity="top"
+                    android:hint="@string/write_negative_notes"
+                    android:inputType="textMultiLine"
+                    android:layoutDirection="rtl"
+                    android:lineSpacingExtra="5dp"
+                    android:lines="5"
+                    android:padding="10dp"
+                    android:textColorHint="@color/colorRed"
+                    android:visibility="gone" />
+
+                <!-- Buttons Container -->
+                <LinearLayout
+                    android:id="@+id/editPersonalInformation_btnLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:gravity="bottom"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal">
+
+                    <!--Submit Button-->
+                    <Button
+                        android:id="@+id/addExperience_submitBtn"
+                        style="?android:buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/submit_button_background"
+                        android:text="@string/register"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="25sp" />
+
+                    <!--Cancel Button-->
+                    <Button
+                        android:id="@+id/addExperience_cancelBtn"
+                        style="?android:buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cancel_button_background"
+                        android:text="@string/cancel"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/addExperience_progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorDarkGrayTransparent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorBackground" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

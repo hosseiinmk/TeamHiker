@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    tools:context=".activities.SurveyCatchupActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/page_background"
+        android:layoutDirection="rtl"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/surveyCatchup_topTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/title_font"
+                android:text="علایق  شما ؟"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/surveyCatchup_btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/surveyCatchup_Title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surveyCatchup_topTitle"
+            android:layout_marginBottom="10dp"
+            android:text="با تکمیل این بخش ما میتونیم سفر های مناسب شما را پیشنهاد بدیم"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/surveyCatchup_Title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surveyCatchup_Title1"
+            android:layout_marginBottom="15dp"
+            android:text="به کدام یک از جاذبه های زیر بیشتر علاقه دارید؟"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/surveyCatchup_buttonLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surveyCatchup_Title2"
+            android:layout_marginBottom="15dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/surveyCatchup_btnTourismAttractions"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_background"
+                android:padding="5dp"
+                android:text="جاذبه های گردشگری" />
+
+            <Button
+                android:id="@+id/surveyCatchup_btnNaturalAttractions"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/simple_background"
+                android:padding="5dp"
+                android:text="جاذبه های طبیعی" />
+
+            <Button
+                android:id="@+id/surveyCatchup_btnEvents"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_background"
+                android:padding="5dp"
+                android:text="رویداد های جشنواره ها" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/surveyCatchup_Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surveyCatchup_buttonLayout1"
+            android:layout_marginBottom="15dp"
+            android:text="به کدام یک از جاذبه های طبیعی زیر بیشتر علاقه دارید؟"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/surveyCatchup_buttonLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surveyCatchup_Title3"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/surveyCatchup_btnJungle"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_background"
+                android:text="جنگل" />
+
+            <Button
+                android:id="@+id/surveyCatchup_btnMountain"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/simple_background"
+                android:text="کوه" />
+
+            <Button
+                android:id="@+id/surveyCatchup_btnSea"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_background"
+                android:text="دریا" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/surveyCatchup_buttonLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surveyCatchup_buttonLayout2"
+            android:layout_marginBottom="15dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/surveyCatchup_btnLake"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/simple_background"
+                android:text="دریاچه" />
+
+            <Button
+                android:id="@+id/surveyCatchup_btnWatterFall"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/simple_background"
+                android:text="آبشار" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/surveyCatchup_Title4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surveyCatchup_buttonLayout3"
+            android:layout_marginBottom="15dp"
+            android:text="سفر با چه کسانی را ترجیح می دهید؟"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/surveyCatchup_buttonLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surveyCatchup_Title4"
+            android:layout_marginBottom="15dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/surveyCatchup_btnFamily"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_background"
+                android:text="خانواده" />
+
+            <Button
+                android:id="@+id/surveyCatchup_btnFriends"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/simple_background"
+                android:text="دوستان" />
+
+            <Button
+                android:id="@+id/surveyCatchup_btnAlone"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_background"
+                android:text="تنها" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/surveyCatchup_Title5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surveyCatchup_buttonLayout4"
+            android:layout_marginBottom="15dp"
+            android:text="سفری که بیشتر به شما خوش میگذرد؟"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/surveyCatchup_buttonLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surveyCatchup_Title5"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/surveyCatchup_btnEveryThingReady"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/simple_background"
+                android:padding="5dp"
+                android:text="همه چیز حاظر و آماده" />
+
+            <Button
+                android:id="@+id/surveyCatchup_btnChallengeTravels"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/simple_background"
+                android:padding="5dp"
+                android:text="سفر های پر چالش" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/surveyCatchup_btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/submit_button_background"
+            android:text="ثبت"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/surveyCatchup_progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorDarkGrayTransparent"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorBackground"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

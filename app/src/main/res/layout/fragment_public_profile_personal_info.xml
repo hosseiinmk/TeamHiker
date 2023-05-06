@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBackground"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:id="@+id/publicProfilePersonalInfo_aboutMeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="درباره من"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/publicProfilePersonalInfo_aboutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/simple_background"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintTop_toBottomOf="@+id/publicProfilePersonalInfo_aboutMeTitle" />
+
+    <TextView
+        android:id="@+id/publicProfilePersonalInfo_cityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="شهر مبدا : "
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/publicProfilePersonalInfo_aboutMe" />
+
+    <TextView
+        android:id="@+id/publicProfilePersonalInfo_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toStartOf="@+id/publicProfilePersonalInfo_cityTitle"
+        app:layout_constraintTop_toBottomOf="@+id/publicProfilePersonalInfo_aboutMe" />
+
+    <TextView
+        android:id="@+id/publicProfilePersonalInfo_travelsNumTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="تعداد سفرهای انحام شده : "
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/publicProfilePersonalInfo_cityTitle" />
+
+    <TextView
+        android:id="@+id/publicProfilePersonalInfo_travelsNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toStartOf="@+id/publicProfilePersonalInfo_travelsNumTitle"
+        app:layout_constraintTop_toBottomOf="@+id/publicProfilePersonalInfo_cityTitle" />
+
+    <TextView
+        android:id="@+id/publicProfilePersonalInfo_favoritePlacesTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="مقصد های مورد علاقه برای سفر : "
+        android:textColor="@color/colorBlack"
+        app:layout_constraintTop_toBottomOf="@+id/publicProfilePersonalInfo_travelsNumTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/publicProfilePersonalInfo_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/publicProfilePersonalInfo_favoritePlacesTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
